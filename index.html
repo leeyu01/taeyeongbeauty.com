@@ -5,54 +5,74 @@
   <title>Tae Yeong Beauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
     body { margin:0; background:#fff; font-family: 'PT Serif', serif; color:#231b18;}
-    .header { display:flex; align-items:center; justify-content:space-between; padding:1.3rem 3vw 1rem; border-bottom:1.5px solid #ececec; }
-    .header-left, .header-right { width:20%; min-width:70px; }
-    .header-center { flex:1 1 auto; text-align:center; }
-    .insta-link { color:#ec4899; text-decoration:none; font-size:1.18em; font-weight:700; }
-    .logo-img { display:block; margin: 2.2em auto 1.5em auto; max-width:320px; width:80vw; height:auto; }
-    .main-section { display:flex; max-width:1080px; margin:1vw auto 3vw; min-height:480px; }
-    .left { flex:1 1 54%; padding:2vw 3vw 3vw 4vw; display:flex; flex-direction:column; justify-content:center;}
-    .right { flex:1 1 46%; display:flex; align-items:center; justify-content:center; }
-    .headline { font-size:2.08rem; font-family:'PT Serif',serif; font-weight:700; margin-bottom:.85em; }
-    .desc { font-size:1.12rem; color:#4a4343; }
-    .gallery2x2 { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:10px; }
-    .gallery2x2 img { width:180px; height:220px; object-fit:cover; border-radius:10px; box-shadow:0 2px 14px #ec48991b; background:#fff6fc;}
-    @media(max-width:1100px){.gallery2x2 img{width:120px;height:150px;}}
-    @media(max-width:900px){ .main-section{flex-direction:column;} .left{padding:2.1em 6vw 1.5em 6vw;} .right{margin-top:2em;} .gallery2x2 img{width:45vw;height:120px;} .logo-img{margin-top:1.1em;}}
-    @media(max-width:600px){ .headline{font-size:1.29rem;} .gallery2x2{gap:5px;} }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.3rem 3vw 1.1rem 3vw;
+      border-bottom: 1.5px solid #ececec;
+      background: #fff;
+      width: 100%;
+    }
+    .header-left {
+      min-width: 70px;
+      flex: 1 1 0;
+      text-align: left;
+    }
+    .header-center {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+    .header-logo-img {
+      height: 54px;
+      max-width: 260px;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 2vw;
+    }
+    .header-right {
+      min-width: 70px;
+      flex: 1 1 0;
+      text-align: right;
+    }
+    .home-link {
+      color: #222;
+      text-decoration: none;
+      font-size: 1.05em;
+      letter-spacing: .01em;
+      font-weight: 500;
+      padding-left: .3em;
+    }
+    .insta-icon {
+      height: 34px;
+      width: 34px;
+      vertical-align: middle;
+      margin-right: .3em;
+    }
+    @media (max-width: 700px) {
+      .header { flex-direction: column; gap: .7em; padding: 1.1rem 1vw; }
+      .header-center { margin: .6em 0; }
+      .header-logo-img { height: 40px; }
+      .header-right, .header-left { text-align: center; }
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="header-left"><a href="#" style="color:#222;text-decoration:none;">Home</a></div>
-    <div class="header-center"></div>
-    <div class="header-right" style="text-align:right;">
-      <a class="insta-link" href="https://instagram.com/taeyeongbeauty" target="_blank">Instagram</a>
+    <div class="header-left">
+      <a class="home-link" href="/">Home</a>
+    </div>
+    <div class="header-center">
+      <img src="./img/logo.jpg" class="header-logo-img" alt="Tae Yeong Beauty Logo">
+    </div>
+    <div class="header-right">
+      <a href="https://instagram.com/taeyeongbeauty" target="_blank">
+        <img src="./img/inst.png" class="insta-icon" alt="Instagram">
+      </a>
     </div>
   </div>
-
-  <!-- Logo as image (hero.jpg) -->
-  <img class="logo-img" src="./img/hero.jpg" alt="Tae Yeong Beauty Logo">
-
-  <div class="main-section">
-    <div class="left">
-      <div class="headline">Nails like no other</div>
-      <div class="desc">
-        Four seasonal looks. Our nail art and care bring out the best in you.<br>
-        Gel, luxury art, specialized pedicures. Book your appointment today.
-      </div>
-    </div>
-    <div class="right">
-      <div class="gallery2x2">
-        <img src="./img/spring-nails.jpg" alt="Spring Nails">
-        <img src="./img/summer-nails.jpg" alt="Summer Nails">
-        <img src="./img/fall-nails.jpg" alt="Fall Nails">
-        <img src="./img/winter-nails.jpg" alt="Winter Nails">
-      </div>
-    </div>
-  </div>
+  <!-- ... rest of your content ... -->
 </body>
 </html>
