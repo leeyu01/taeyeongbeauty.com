@@ -1,84 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taeyeongbeauty — Nail Artist Studio: seasonal nail art, gel manicures, and custom designs.">
-    <meta property="og:title" content="Taeyeongbeauty — Nail Artist Studio">
-    <meta property="og:description" content="Premium nail art, gel manicures, and custom designs inspired by the four seasons.">
-    <meta property="og:image" content="./img/spring-nails.jpg">
-    <title>Taeyeongbeauty — Nail Artist Studio</title>
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="icon" href="./img/favicon.png" type="image/png"/>
-  </head>
-  <body>
-    <nav class="menu-wr">
-      <div onclick="window.location='#home'" class="menu">Home</div>
-      <div onclick="window.location='#services'" class="menu">Services</div>
-      <div onclick="window.location='#gallery'" class="menu">Gallery</div>
-      <div onclick="window.location='#booking'" class="menu">Book</div>
-      <div onclick="window.location='#contact'" class="menu">Contact</div>
-    </nav>
-    <section id="home">
-      <img class="hero-img" src="./img/hero.jpg" alt="Nail art studio">
-      <div class="hero-content">
-        <h1>Artistry Through the Seasons</h1>
-        <p>Welcome to <strong>Taeyeongbeauty</strong> — your modern nail studio for gel manicures and art inspired by nature’s palette.</p>
-        <a class="btn-primary" href="https://calendly.com/taeyeongbeauty/appointment" target="_blank">Book Appointment</a>
+<head>
+  <meta charset="utf-8">
+  <title>Taeyeongbeauty — Nail Artist Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taeyeongbeauty: Hoboken's premium nail artist — book your appointment online!">
+  <link rel="icon" href="./img/favicon.png">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#fff9fc; color:#322; }
+    .nav { padding: 1.5rem 5vw 1rem; background:#fff; font-size:1.12rem; border-bottom:1px solid #fae4f2; }
+    .nav strong { color: #ec4899; letter-spacing:.04em; }
+    .hero-img { width:100%; max-height:440px; object-fit:cover; display:block; }
+    .hero-content { max-width:530px; background:rgba(255,255,255,0.9); margin:-100px 0 2.5rem 6vw; border-radius:1.6rem; box-shadow:0 8px 36px #f2e5ec30; padding:2.5rem 2.8rem; position:relative; }
+    @media (max-width:650px){ .hero-content{margin:1.2rem 5vw;} }
+    h1 { font-family: 'Playfair Display', serif; font-size:2.4rem; font-weight:700; margin:0 0 .6rem; }
+    h2 { font-size:1.7rem; color:#ec4899; margin:2.5rem 0 1.4rem; font-family:'Playfair Display',serif;}
+    .btn { background:#ec4899; color:#fff; border:none; border-radius:999px; padding:.75rem 2rem; font-size:1.1rem; font-weight:600; margin-top:1.1rem; text-decoration:none; display:inline-block; box-shadow:0 2px 9px #ec489925; transition:background .2s;}
+    .btn:hover { background:#db2777;}
+    .section { padding:2rem 6vw 1.3rem; max-width:880px; margin:0 auto; }
+    .services-list { display:flex; flex-wrap:wrap; gap:2rem;}
+    .service-item { background:#fff; border-radius:13px; box-shadow:0 2px 12px #ec489908; padding:1.3rem 1.4rem; min-width:200px; flex:1 1 210px;}
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:1.3rem;}
+    .gallery-grid img { width:100%; border-radius:16px; object-fit:cover; border:2px solid #fbe7f0; box-shadow:0 1px 7px #ec489913;}
+    footer { padding:2rem 0 1.2rem; text-align:center; font-size:1.08rem; color:#bca5b8; background:#fff; border-top:1px solid #fae3f0;}
+  </style>
+</head>
+<body>
+  <nav class="nav"><strong>Taeyeongbeauty</strong></nav>
+  
+  <section>
+    <img src="./img/hero.jpg" alt="Taeyeongbeauty Studio" class="hero-img">
+    <div class="hero-content">
+      <h1>Nail Art for Every Season</h1>
+      <p>Premium gel manicures & bespoke designs — welcome to Hoboken’s boutique nail art studio. Reserve your spot instantly.</p>
+      <a class="btn" href="https://calendly.com/taeyeongbeauty/appointment" target="_blank">Book Appointment</a>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Services & Pricing</h2>
+    <div class="services-list">
+      <div class="service-item">
+        <strong>Gel Manicure</strong><br>
+        <span>$45</span><br>
+        <small>Shape, cuticle care, gel polish</small>
       </div>
-    </section>
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <div class="services-list">
-        <div class="service-item">
-          <h3>Gel Manicure</h3>
-          <p>Durable, glossy, and flawless — shaped and styled for every season.</p>
-        </div>
-        <div class="service-item">
-          <h3>Custom Nail Art</h3>
-          <p>Personalized art designs — minimalist spring tones to rich autumn accents.</p>
-        </div>
-        <div class="service-item">
-          <h3>Care & Removal</h3>
-          <p>Gentle, healthy nail care that protects and nourishes your natural nails.</p>
-        </div>
+      <div class="service-item">
+        <strong>Nail Art</strong><br>
+        <span>from $20</span><br>
+        <small>Custom hand-painted art</small>
       </div>
-    </section>
-    <section id="gallery" class="section">
-      <h2>Four Seasons of Nail Art</h2>
-      <div class="gallery-grid">
-        <img src="./img/spring-nails.jpg" alt="Spring nail art - pastel flowers">
-        <img src="./img/summer-nails.jpg" alt="Summer nail art - coral and turquoise">
-        <img src="./img/fall-nails.jpg" alt="Fall nail art - warm & gold">
-        <img src="./img/winter-nails.jpg" alt="Winter nail art - icy sparkle">
+      <div class="service-item">
+        <strong>Removal & Care</strong><br>
+        <span>$15</span><br>
+        <small>Gentle soak-off, hydration</small>
       </div>
-    </section>
-    <section id="booking" class="section">
-      <h2>Book via Calendly</h2>
-      <p>Choose your service, pick your time, and book instantly below.</p>
-      <iframe
-        title="Calendly Booking"
-        src="https://calendly.com/taeyeongbeauty/appointment?hide_gdpr_banner=1"
-        width="100%"
-        height="700"
-        frameborder="0"
-        style="border-radius:14px;"
-      ></iframe>
-    </section>
-    <section id="contact" class="section">
-      <h2>Contact & Location</h2>
-      <p><strong>Taeyeongbeauty Studio</strong><br>
-         123 Bloom Street, Suite 2, Hoboken, NJ</p>
-      <p>Phone: <a href="tel:+12025550123">(202) 555-0123</a><br>
-         Email: <a href="mailto:hello@taeyeongbeauty.com">hello@taeyeongbeauty.com</a></p>
-      <p>Follow us on <a href="#">Instagram</a> & <a href="#">Facebook</a></p>
-    </section>
-    <footer>
-      <p>© <span id="year"></span> Taeyeongbeauty. All rights reserved.</p>
-    </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Gallery — Four Seasons</h2>
+    <div class="gallery-grid">
+      <img src="./img/spring-nails.jpg" alt="Spring nail art">
+      <img src="./img/summer-nails.jpg" alt="Summer nail art">
+      <img src="./img/fall-nails.jpg" alt="Fall nail art">
+      <img src="./img/winter-nails.jpg" alt="Winter nail art">
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <h2>Book Online</h2>
+    <iframe
+      title="Calendly Booking"
+      src="https://calendly.com/taeyeongbeauty/appointment?hide_gdpr_banner=1"
+      width="100%"
+      height="650"
+      frameborder="0"
+      style="border-radius:13px;"
+    ></iframe>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact & Location</h2>
+    <p>
+      <strong>Taeyeongbeauty Studio</strong><br>
+      123 Bloom Street, Suite 2, Hoboken, NJ<br>
+      <a href="tel:+12025550123">(202) 555-0123</a> &nbsp; | &nbsp; 
+      <a href="mailto:ty@taeyeongbeauty.com">ty@taeyeongbeauty.com</a>
+    </p>
+    <p>
+      Follow: 
+      <a href="#">Instagram</a> &bull; <a href="#">Facebook</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Taeyeongbeauty. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
