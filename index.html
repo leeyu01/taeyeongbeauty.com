@@ -2,72 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Taeyeongbeauty</title>
+  <title>Tae Yeong Beauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: 'PT Serif', 'Playfair Display', serif; background:#fff; color:#231b18;}
-    .header { display:flex; align-items:center; padding:1.4rem 3vw 1.2rem; border-bottom:1.5px solid #eee;}
-    .header-logo { font-family:'Playfair Display',cursive; font-size:2.1rem; font-weight:700; letter-spacing:.07em;}
-    .header-home { color:#222; text-decoration:none; font-size:1.02em; margin-right:2em;}
-    .main-section { display:flex; max-width:1080px; margin:3vw auto; min-height:470px; }
-    .left { flex:1 1 52%; padding:2.7vw 3vw 3vw 4vw; display:flex; flex-direction:column; justify-content:center;}
-    .right { flex:1 1 48%; display:flex; align-items:center; justify-content:center; position:relative;}
-    .headline { font-size:2.05rem; font-family:'PT Serif',serif; font-weight:700; margin-bottom:.9em;}
-    .desc { font-size:1.12rem; color:#4a4343;}
-    .gallery-img { width:100%; max-width:420px; max-height:490px; object-fit:cover; border-radius:10px; box-shadow:0 4px 40px #cebbbb22;}
-    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:#fff6fbcc; border:none; font-size:2rem; color:#ec4899; border-radius:99px; width:38px; height:38px; cursor:pointer; }
-    .carousel-btn.left { left:-18px;}
-    .carousel-btn.right { right:-18px;}
-    .dots { text-align:center; margin-top:18px;}
-    .dot { display:inline-block; width:10px; height:10px; border-radius:99px; background:#e5d7d8; margin:0 3px; cursor:pointer; }
-    .dot.active { background:#ec4899;}
-    @media(max-width:900px){ .main-section{flex-direction:column;} .right{margin-top:2.7em;} .left{padding:1.7em 6vw 1.5em 6vw;} }
+    body { margin:0; background:#fff; font-family: 'PT Serif', serif; color:#231b18;}
+    .header { display:flex; align-items:center; justify-content:space-between; padding:1.3rem 3vw 1rem; border-bottom:1.5px solid #ececec; }
+    .header-left, .header-right { width:20%; min-width:70px; }
+    .header-center { flex:1 1 auto; text-align:center; }
+    .insta-link { color:#ec4899; text-decoration:none; font-size:1.18em; font-weight:700; }
+    .logo-img { display:block; margin: 2.2em auto 1.5em auto; max-width:320px; width:80vw; height:auto; }
+    .main-section { display:flex; max-width:1080px; margin:1vw auto 3vw; min-height:480px; }
+    .left { flex:1 1 54%; padding:2vw 3vw 3vw 4vw; display:flex; flex-direction:column; justify-content:center;}
+    .right { flex:1 1 46%; display:flex; align-items:center; justify-content:center; }
+    .headline { font-size:2.08rem; font-family:'PT Serif',serif; font-weight:700; margin-bottom:.85em; }
+    .desc { font-size:1.12rem; color:#4a4343; }
+    .gallery2x2 { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:10px; }
+    .gallery2x2 img { width:180px; height:220px; object-fit:cover; border-radius:10px; box-shadow:0 2px 14px #ec48991b; background:#fff6fc;}
+    @media(max-width:1100px){.gallery2x2 img{width:120px;height:150px;}}
+    @media(max-width:900px){ .main-section{flex-direction:column;} .left{padding:2.1em 6vw 1.5em 6vw;} .right{margin-top:2em;} .gallery2x2 img{width:45vw;height:120px;} .logo-img{margin-top:1.1em;}}
+    @media(max-width:600px){ .headline{font-size:1.29rem;} .gallery2x2{gap:5px;} }
   </style>
 </head>
 <body>
   <div class="header">
-    <a class="header-home" href="#">Home</a>
-    <div class="header-logo">Taeyeongbeauty</div>
+    <div class="header-left"><a href="#" style="color:#222;text-decoration:none;">Home</a></div>
+    <div class="header-center"></div>
+    <div class="header-right" style="text-align:right;">
+      <a class="insta-link" href="https://instagram.com/taeyeongbeauty" target="_blank">Instagram</a>
+    </div>
   </div>
+
+  <!-- Logo as image (hero.jpg) -->
+  <img class="logo-img" src="./img/hero.jpg" alt="Tae Yeong Beauty Logo">
 
   <div class="main-section">
     <div class="left">
       <div class="headline">Nails like no other</div>
       <div class="desc">
-        Featuring four seasonal looks, our art and care bring out the best in you. Top of the line manicures, nail art, and specialized pedicures will have you stand out from the crowd.<br>
-        Online booking available below.
+        Four seasonal looks. Our nail art and care bring out the best in you.<br>
+        Gel, luxury art, specialized pedicures. Book your appointment today.
       </div>
     </div>
     <div class="right">
-      <button class="carousel-btn left" onclick="prevImg()" aria-label="Previous Image">&#8592;</button>
-      <img id="main-img" class="gallery-img" src="./img/spring-nails.jpg" alt="Nail Art">
-      <button class="carousel-btn right" onclick="nextImg()" aria-label="Next Image">&#8594;</button>
+      <div class="gallery2x2">
+        <img src="./img/spring-nails.jpg" alt="Spring Nails">
+        <img src="./img/summer-nails.jpg" alt="Summer Nails">
+        <img src="./img/fall-nails.jpg" alt="Fall Nails">
+        <img src="./img/winter-nails.jpg" alt="Winter Nails">
+      </div>
     </div>
   </div>
-  <div class="dots">
-    <span class="dot active" onclick="showImg(0)"></span>
-    <span class="dot" onclick="showImg(1)"></span>
-    <span class="dot" onclick="showImg(2)"></span>
-    <span class="dot" onclick="showImg(3)"></span>
-  </div>
-  <script>
-    // Your four seasonal images
-    const imgs = [
-      "./img/spring-nails.jpg",
-      "./img/summer-nails.jpg",
-      "./img/fall-nails.jpg",
-      "./img/winter-nails.jpg"
-    ];
-    let current = 0;
-    function showImg(i){
-      current = i;
-      document.getElementById('main-img').src = imgs[i];
-      document.querySelectorAll('.dot').forEach((d, j)=>d.className='dot'+(j==i?' active':''));
-    }
-    function prevImg(){ showImg((current+imgs.length-1)%imgs.length);}
-    function nextImg(){ showImg((current+1)%imgs.length);}
-  </script>
 </body>
 </html>
