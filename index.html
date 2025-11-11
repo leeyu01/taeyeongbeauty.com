@@ -1,53 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Taeyeongbeauty – Nail Art Studio</title>
+  <title>Taeyeongbeauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Boutique Hoboken nail salon. Gel, nail art, seasonal designs. Book instantly.">
   <link rel="icon" href="./img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
-    body { font-family:'PT Serif',serif; background:#fff; color:#171313; margin:0; }
-    .main-block { max-width:700px; margin:0 auto; padding:0 2vw; }
-    .hero-img { width:100%; display:block; max-height:420px; object-fit:cover; }
-    .headline { font-size:2.1rem; margin-top:1.2em; font-weight:700; text-align:center; }
-    .desc { font-size:1.14rem; color:#403d3d; margin:1.1em 0 2em; text-align:center; }
-    .book-btn { display:block; background:#ec4899; color:#fff; font-weight:700; font-size:1.08rem; border:none; border-radius:999px; margin:0 auto 2.3em; padding:.82em 2.5em; text-decoration:none; text-align:center; width:fit-content; box-shadow:0 1px 8px #ec489923;}
-    .book-btn:hover { background:#b61f74; }
-    .gallery-img { width:100%; border-radius:18px; margin:1.8em 0 2.1em; box-shadow:0 2px 14px #ec489911; }
-    .address, .contact { text-align:center; font-size:1.05em; color:#6d6172; }
-    .contact a { color:#ec4899; text-decoration:none; font-weight:600; }
-    .contact a:hover { text-decoration:underline; }
-    .insta { text-align:center; margin-top:1.3em; }
-    .insta a { color:#ec4899; text-decoration:none; font-weight:700;}
-    .footer { text-align:center; margin:2.7em 0 1em; font-size:1em; color:#bca5b8;}
-    @media(max-width:600px){ .main-block{padding:0 1vw;} .headline{font-size:1.38rem;} }
+    body { margin:0; font-family: 'PT Serif', 'Playfair Display', serif; background:#fff; color:#231b18;}
+    .header { display:flex; align-items:center; padding:1.4rem 3vw 1.2rem; border-bottom:1.5px solid #eee;}
+    .header-logo { font-family:'Playfair Display',cursive; font-size:2.1rem; font-weight:700; letter-spacing:.07em;}
+    .header-home { color:#222; text-decoration:none; font-size:1.02em; margin-right:2em;}
+    .main-section { display:flex; max-width:1080px; margin:3vw auto; min-height:470px; }
+    .left { flex:1 1 52%; padding:2.7vw 3vw 3vw 4vw; display:flex; flex-direction:column; justify-content:center;}
+    .right { flex:1 1 48%; display:flex; align-items:center; justify-content:center; position:relative;}
+    .headline { font-size:2.05rem; font-family:'PT Serif',serif; font-weight:700; margin-bottom:.9em;}
+    .desc { font-size:1.12rem; color:#4a4343;}
+    .gallery-img { width:100%; max-width:420px; max-height:490px; object-fit:cover; border-radius:10px; box-shadow:0 4px 40px #cebbbb22;}
+    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:#fff6fbcc; border:none; font-size:2rem; color:#ec4899; border-radius:99px; width:38px; height:38px; cursor:pointer; }
+    .carousel-btn.left { left:-18px;}
+    .carousel-btn.right { right:-18px;}
+    .dots { text-align:center; margin-top:18px;}
+    .dot { display:inline-block; width:10px; height:10px; border-radius:99px; background:#e5d7d8; margin:0 3px; cursor:pointer; }
+    .dot.active { background:#ec4899;}
+    @media(max-width:900px){ .main-section{flex-direction:column;} .right{margin-top:2.7em;} .left{padding:1.7em 6vw 1.5em 6vw;} }
   </style>
 </head>
 <body>
-  <div class="main-block">
-    <img src="./img/hero.jpg" alt="Nail Art at Taeyeongbeauty" class="hero-img">
-    <div class="headline">Nails Like No Other</div>
-    <div class="desc">
-      Boutique nail studio in Hoboken, NJ—modern gel, luxury art, and seasonal inspiration. <br>
-      Book your appointment below.
-    </div>
-    <a class="book-btn" href="https://calendly.com/taeyeongbeauty/appointment" target="_blank">Book Now</a>
-    <img src="./img/spring-nails.jpg" alt="Nail Art Gallery" class="gallery-img">
-    <div class="address">
-      123 Bloom Street, Suite 2, Hoboken, NJ<br>
-      Mon–Fri: 10am–7:30pm &nbsp; Sat: 10am–7pm &nbsp; Sun: 10am–6pm
-    </div>
-    <div class="contact">
-      <a href="mailto:ty@taeyeongbeauty.com">ty@taeyeongbeauty.com</a> &nbsp; | &nbsp; <a href="tel:+12025550123">(202) 555-0123</a>
-    </div>
-    <div class="insta">
-      <a href="https://instagram.com/taeyeongbeauty" target="_blank">Follow us on Instagram</a>
-    </div>
-    <div class="footer">&copy; <span id="year"></span> Taeyeongbeauty. All rights reserved.</div>
+  <div class="header">
+    <a class="header-home" href="#">Home</a>
+    <div class="header-logo">Taeyeongbeauty</div>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <div class="main-section">
+    <div class="left">
+      <div class="headline">Nails like no other</div>
+      <div class="desc">
+        Featuring four seasonal looks, our art and care bring out the best in you. Top of the line manicures, nail art, and specialized pedicures will have you stand out from the crowd.<br>
+        Online booking available below.
+      </div>
+    </div>
+    <div class="right">
+      <button class="carousel-btn left" onclick="prevImg()" aria-label="Previous Image">&#8592;</button>
+      <img id="main-img" class="gallery-img" src="./img/spring-nails.jpg" alt="Nail Art">
+      <button class="carousel-btn right" onclick="nextImg()" aria-label="Next Image">&#8594;</button>
+    </div>
+  </div>
+  <div class="dots">
+    <span class="dot active" onclick="showImg(0)"></span>
+    <span class="dot" onclick="showImg(1)"></span>
+    <span class="dot" onclick="showImg(2)"></span>
+    <span class="dot" onclick="showImg(3)"></span>
+  </div>
+  <script>
+    // Your four seasonal images
+    const imgs = [
+      "./img/spring-nails.jpg",
+      "./img/summer-nails.jpg",
+      "./img/fall-nails.jpg",
+      "./img/winter-nails.jpg"
+    ];
+    let current = 0;
+    function showImg(i){
+      current = i;
+      document.getElementById('main-img').src = imgs[i];
+      document.querySelectorAll('.dot').forEach((d, j)=>d.className='dot'+(j==i?' active':''));
+    }
+    function prevImg(){ showImg((current+imgs.length-1)%imgs.length);}
+    function nextImg(){ showImg((current+1)%imgs.length);}
+  </script>
 </body>
 </html>
