@@ -5,13 +5,14 @@
   <title>Tae Yeong Beauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
     body { margin:0; background:#fff; font-family: 'PT Serif', serif; color:#231b18;}
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.3rem 3vw 1.1rem 3vw;
+      padding: 1.3rem 3vw 1rem 3vw;
       border-bottom: 1.5px solid #ececec;
       background: #fff;
       width: 100%;
@@ -51,11 +52,65 @@
       vertical-align: middle;
       margin-right: .3em;
     }
-    @media (max-width: 700px) {
-      .header { flex-direction: column; gap: .7em; padding: 1.1rem 1vw; }
-      .header-center { margin: .6em 0; }
-      .header-logo-img { height: 40px; }
-      .header-right, .header-left { text-align: center; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.6em 4vw 2em 4vw;
+      display: flex;
+      gap: 3vw;
+      min-height: 430px;
+    }
+    .left-col {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-right: 2vw;
+    }
+    .right-col {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 290px;
+    }
+    .headline {
+      font-size: 2.4rem;
+      font-family:'PT Serif', serif;
+      font-weight:700;
+      margin-bottom: .7em;
+      letter-spacing: -.01em;
+    }
+    .desc {
+      font-size:1.15rem;
+      color:#423d39;
+      line-height:1.7;
+      font-weight:400;
+      margin-bottom: .7em;
+      max-width: 540px;
+    }
+    .main-image {
+      width: 350px;
+      height: 420px;
+      max-width: 90vw;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 8px 42px #dbb6b728;
+      background: #fff;
+      border: 1px solid #f3e6ef;
+      transition: box-shadow .18s;
+    }
+    @media(max-width:900px){
+      .container { flex-direction: column; gap:2.3em; }
+      .left-col, .right-col {padding:0;}
+      .right-col { justify-content:center;}
+      .main-image{width:90vw;max-width:410px;height:47vw;min-height:200px;}
+    }
+    @media(max-width:600px){
+      .headline{font-size:1.24rem;}
+      .container{padding:2em 3vw 1em 3vw;}
+      .main-image{width:98vw;}
     }
   </style>
 </head>
@@ -73,6 +128,30 @@
       </a>
     </div>
   </div>
-  <!-- ... rest of your content ... -->
+
+  <div class="container">
+    <div class="left-col">
+      <div class="headline">Tae Yeong Nails like no other</div>
+      <div class="desc">
+        Featuring two locations, our techs and artists are ready to bring out the best in you. Top of the line manicures, nail art and specialized pedicures that will have you stand out from the crowd. Online booking available below.
+      </div>
+    </div>
+    <div class="right-col">
+      <img class="main-image" id="rotating-img" src="./img/nail1.jpg" alt="Nail Art">
+    </div>
+  </div>
+
+  <script>
+    // Place your 10 images as nail1.jpg ... nail10.jpg in /img/
+    const images = [
+      './img/nail1.jpg','./img/nail2.jpg','./img/nail3.jpg','./img/nail4.jpg','./img/nail5.jpg',
+      './img/nail6.jpg','./img/nail7.jpg','./img/nail8.jpg','./img/nail9.jpg','./img/nail10.jpg'
+    ];
+    let idx = 0;
+    setInterval(()=>{
+      idx = (idx+1)%images.length;
+      document.getElementById('rotating-img').src = images[idx];
+    }, 500);
+  </script>
 </body>
 </html>
