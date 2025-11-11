@@ -7,61 +7,54 @@
   <link rel="icon" href="./img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; background:#fff; font-family: 'PT Serif', serif; color:#231b18;}
+    html { box-sizing:border-box; }
+    *,*:before,*:after { box-sizing:inherit; }
+    body { margin:0; background:#fff; font-family:'PT Serif',serif; color:#231b18;}
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.3rem 3vw 1rem 3vw;
+      padding: 1.3rem 4vw 1rem 4vw;
       border-bottom: 1.5px solid #ececec;
       background: #fff;
       width: 100%;
     }
-    .header-left {
-      min-width: 70px;
-      flex: 1 1 0;
-      text-align: left;
-    }
-    .header-center {
-      flex: 0 0 auto;
-      text-align: center;
-    }
+    .header-left, .header-right { min-width:70px; flex:1 1 0; }
+    .header-left { text-align:left; }
+    .header-center { flex: 0 0 auto; text-align:center; }
     .header-logo-img {
       height: 54px;
-      max-width: 260px;
-      vertical-align: middle;
-      display: inline-block;
+      max-width: 240px;
+      vertical-align:middle;
+      display:inline-block;
       margin: 0 2vw;
     }
-    .header-right {
-      min-width: 70px;
-      flex: 1 1 0;
-      text-align: right;
-    }
     .home-link {
-      color: #222;
-      text-decoration: none;
-      font-size: 1.05em;
-      letter-spacing: .01em;
-      font-weight: 500;
-      padding-left: .3em;
+      color:#222;
+      text-decoration:none;
+      font-size:1.07em;
+      letter-spacing:.01em;
+      font-weight:500;
+      padding-left:.3em;
     }
     .insta-icon {
       height: 34px;
       width: 34px;
-      vertical-align: middle;
-      margin-right: .3em;
+      vertical-align:middle;
+      margin-right:.3em;
     }
+
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 2.6em 4vw 2em 4vw;
+      padding: 3.3em 4vw 2.4em 4vw;
       display: flex;
       gap: 3vw;
       min-height: 430px;
+      align-items: center;
     }
     .left-col {
-      flex: 1 1 50%;
+      flex: 1 1 52%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -69,48 +62,56 @@
       padding-right: 2vw;
     }
     .right-col {
-      flex: 1 1 50%;
+      flex: 1 1 48%;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 290px;
+      min-width: 210px;
     }
     .headline {
-      font-size: 2.4rem;
-      font-family:'PT Serif', serif;
+      font-size: 2.3rem;
+      font-family:'PT Serif',serif;
       font-weight:700;
       margin-bottom: .7em;
       letter-spacing: -.01em;
     }
     .desc {
-      font-size:1.15rem;
+      font-size:1.13rem;
       color:#423d39;
       line-height:1.7;
       font-weight:400;
-      margin-bottom: .7em;
-      max-width: 540px;
+      margin-bottom:.7em;
+      max-width:540px;
     }
     .main-image {
-      width: 350px;
-      height: 420px;
-      max-width: 90vw;
+      width: 98%;
+      max-width: 420px;
+      height: auto;
+      aspect-ratio: 5/6;
       object-fit: cover;
       border-radius: 18px;
       box-shadow: 0 8px 42px #dbb6b728;
       background: #fff;
       border: 1px solid #f3e6ef;
       transition: box-shadow .18s;
+      min-width:160px;
+      min-height:170px;
     }
-    @media(max-width:900px){
-      .container { flex-direction: column; gap:2.3em; }
-      .left-col, .right-col {padding:0;}
-      .right-col { justify-content:center;}
-      .main-image{width:90vw;max-width:410px;height:47vw;min-height:200px;}
+    /* Tablet: stack with image on top */
+    @media (max-width:950px) {
+      .container { flex-direction:column; gap:2.7em; padding:2.4em 2vw 1.4em 2vw;}
+      .left-col, .right-col {padding:0; width:100%;}
+      .main-image{max-width:340px;}
     }
-    @media(max-width:600px){
-      .headline{font-size:1.24rem;}
-      .container{padding:2em 3vw 1em 3vw;}
-      .main-image{width:98vw;}
+    /* Mobile: even more compact, smaller logo & fonts */
+    @media (max-width:650px) {
+      .header { flex-direction:column; gap:.7em; padding:1em 2vw .7em 2vw;}
+      .header-logo-img { height:36px; max-width:130px;}
+      .headline { font-size:1.25rem;}
+      .desc { font-size:1em;}
+      .main-image{max-width:92vw; min-height:110px;}
+      .container{padding:1.2em 2vw .6em 2vw;}
+      .header-left, .header-right { text-align:center; }
     }
   </style>
 </head>
@@ -122,7 +123,7 @@
     <div class="header-center">
       <img src="./img/logo.jpg" class="header-logo-img" alt="Tae Yeong Beauty Logo">
     </div>
-    <div class="header-right">
+    <div class="header-right" style="text-align:right;">
       <a href="https://instagram.com/taeyeongbeauty" target="_blank">
         <img src="./img/inst.png" class="insta-icon" alt="Instagram">
       </a>
