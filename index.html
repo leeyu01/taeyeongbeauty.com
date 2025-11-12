@@ -144,25 +144,27 @@
       .gallery-grid{grid-template-columns:repeat(2,1fr);}
     }
       .gallery-home-link {
-      display: inline-block;
-      color: #000;
-      font-size: 2rem;
-      font-family: 'PT Serif', serif;
-      font-weight: 700;
-      text-align: left;
-      text-decoration: none;
-      margin: 2rem 0 1.1rem 1vw;
-      padding: 0;
-      letter-spacing: -.01em;
-      background: none;
-      border: none;
-      box-shadow: none;
-      cursor: pointer;
-    }
-    .gallery-home-link:hover {
-     text-decoration: underline;
-     background: none;
-    }
+        color: #000;
+        font-size: 2rem;
+        font-family: 'PT Serif', serif;
+        font-weight: 700;
+        text-align: right;
+        text-decoration: none;
+        margin: 2rem 2vw 1.1rem 0;
+        padding: 0;
+        letter-spacing: -.01em;
+        background: none;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        display: inline-block;
+        transition: color .16s;
+      }
+      .gallery-home-link:hover {
+        text-decoration: underline;
+        color: #ec4899;
+      }
+
   </style>
 </head>
 <body>
@@ -193,9 +195,10 @@
     </div>
   </div>
 
-<!-- Gallery (replace previous .gallery-wrap block) -->
 <div class="gallery-wrap" id="gallery-wrap">
-  <a href="#" class="gallery-home-link" onclick="showMain();return false;">Home</a>
+  <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 1.7rem;">
+    <a href="#" class="gallery-home-link" onclick="showMain();return false;">Home</a>
+  </div>
   <div class="gallery-grid">
     <img src="./nail/nail1.jpg" alt="Nail 1">
     <img src="./nail/nail2.jpg" alt="Nail 2">
@@ -220,6 +223,7 @@
     <img src="./nail/nail21.jpg" alt="Nail 21">
   </div>
 </div>
+
 
   <script>
     // Rotating image (main page)
