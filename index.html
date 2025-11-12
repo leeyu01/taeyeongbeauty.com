@@ -5,10 +5,7 @@
   <title>Tae Yeong Beauty — Nail Art Design Hoboken NJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tae Yeong Beauty offers the best nail art design and gel manicures in Hoboken, NJ. Custom designs, luxury pedicures, and seasonal looks by talented nail artists. Book your Hoboken appointment today!">
-  <!-- Google search keywords for Hoboken NJ, nail art, nail salon, gel manicure, custom design -->
   <meta name="keywords" content="nail art, nail art design, nail salon, Hoboken NJ, gel manicure, pedicure, nail artist, Tae Yeong Beauty, custom nails, seasonal nails, luxury nails, nail design Hoboken">
-  
-  <!-- JSON-LD Structured Data for Local Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,7 +24,6 @@
     "description": "Tae Yeong Beauty is a nail salon in Hoboken NJ specializing in custom nail art design, gel manicures, and luxury pedicures. Book your appointment online."
   }
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
@@ -53,21 +49,23 @@
       display:inline-block;
       margin: 0 2vw;
     }
-    .home-link {
-      color:#222;
+    .gallery-link {
+      color:#ec4899;
       text-decoration:none;
-      font-size:1.07em;
-      letter-spacing:.01em;
-      font-weight:500;
-      padding-left:.3em;
+      font-size:1.12em;
+      font-weight:600;
+      letter-spacing:.04em;
+      border-radius:22px;
+      padding:7px 24px;
+      transition: background .14s;
     }
+    .gallery-link:hover { text-decoration:underline; background:#fae9f5;}
     .insta-icon {
       height: 34px;
       width: 34px;
       vertical-align:middle;
       margin-right:.3em;
     }
-
     .container {
       max-width: 1120px;
       margin: 0 auto;
@@ -121,6 +119,13 @@
       min-width:160px;
       min-height:170px;
     }
+    /* Gallery grid */
+    .gallery-wrap { display:none; padding:3vw 0; max-width:1200px; margin:0 auto;}
+    .gallery-title {font-size:2rem; font-weight:700; text-align:center; margin:2rem 0 1rem;}
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.5em; justify-content:center;}
+    .gallery-grid img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:15px; box-shadow:0 2px 18px #ec48990a; border:1.2px solid #f3e6ef;}
+    .back-link {display:block; text-align:center; margin:2em auto 0; color:#ec4899; font-size:1.1em; font-weight:600; text-decoration:none;}
+    .back-link:hover{ text-decoration:underline;}
     /* Tablet: stack with image on top */
     @media (max-width:950px) {
       .container { flex-direction:column; gap:2.7em; padding:2.4em 2vw 1.4em 2vw;}
@@ -136,36 +141,14 @@
       .main-image{max-width:92vw; min-height:110px;}
       .container{padding:1.2em 2vw .6em 2vw;}
       .header-left, .header-right { text-align:center; }
+      .gallery-grid{grid-template-columns:repeat(2,1fr);}
     }
-    .gallery-link {
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff8fbcc;
-    color: #ec4899;
-    font-weight: bold;
-    font-size: 1.08rem;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    padding: 7px 22px;
-    border-radius: 25px;
-    box-shadow: 0 2px 10px #ec489928;
-    z-index: 2;
-    transition: background .18s, color .18s;
-    border: 1px solid #ec489960;
-  }
-  .gallery-link:hover {
-    background: #ec4899;
-    color: #fff;
-  }
-
   </style>
 </head>
 <body>
   <div class="header">
     <div class="header-left">
-      <a class="home-link" href="/">Home</a>
+      <a class="gallery-link" href="#" onclick="showGallery();return false;">Gallery</a>
     </div>
     <div class="header-center">
       <img src="./img/logo.jpg" class="header-logo-img" alt="Tae Yeong Beauty Logo">
@@ -177,38 +160,72 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- Main Content -->
+  <div class="container" id="main-content">
     <div class="left-col">
-      <div class="headline">Tae Yeong Nails Beyond Compare</div>
+      <div class="headline">Tae Yeong Nails like no other</div>
       <div class="desc">
-        Expect nothing less than precision manicures, nail art with inspired elegance, and signature pedicures designed to make you effortlessly stand out.
-        Your spotlight moment awaits. Book your appointment below.
+        Featuring two locations, our techs and artists are ready to bring out the best in you. Top of the line manicures, nail art and specialized pedicures that will have you stand out from the crowd. Online booking available below.
       </div>
     </div>
     <div class="right-col">
-      <img class="main-image" id="rotating-img" src="./img/nail1.jpg" alt="Nail Art">
+      <img class="main-image" id="rotating-img" src="./nail/nail1.jpg" alt="Nail Art">
     </div>
   </div>
- <div class="right-col">
-  <div class="img-wrapper" style="position:relative; display:inline-block;">
-    <a href="#gallery" class="gallery-link">Gallery</a>
-    <img class="main-image" id="rotating-img" src="./nail/nail1.jpg" alt="Nail Art">
+
+  <!-- Gallery -->
+  <div class="gallery-wrap" id="gallery-wrap">
+    <div class="gallery-title">Gallery</div>
+    <div class="gallery-grid">
+      <!-- 21 images, change path/filenames as needed -->
+      <img src="./nail/nail1.jpg" alt="Nail 1">
+      <img src="./nail/nail2.jpg" alt="Nail 2">
+      <img src="./nail/nail3.jpg" alt="Nail 3">
+      <img src="./nail/nail4.jpg" alt="Nail 4">
+      <img src="./nail/nail5.jpg" alt="Nail 5">
+      <img src="./nail/nail6.jpg" alt="Nail 6">
+      <img src="./nail/nail7.jpg" alt="Nail 7">
+      <img src="./nail/nail8.jpg" alt="Nail 8">
+      <img src="./nail/nail9.jpg" alt="Nail 9">
+      <img src="./nail/nail10.jpg" alt="Nail 10">
+      <img src="./nail/nail11.jpg" alt="Nail 11">
+      <img src="./nail/nail12.jpg" alt="Nail 12">
+      <img src="./nail/nail13.jpg" alt="Nail 13">
+      <img src="./nail/nail14.jpg" alt="Nail 14">
+      <img src="./nail/nail15.jpg" alt="Nail 15">
+      <img src="./nail/nail16.jpg" alt="Nail 16">
+      <img src="./nail/nail17.jpg" alt="Nail 17">
+      <img src="./nail/nail18.jpg" alt="Nail 18">
+      <img src="./nail/nail19.jpg" alt="Nail 19">
+      <img src="./nail/nail20.jpg" alt="Nail 20">
+      <img src="./nail/nail21.jpg" alt="Nail 21">
+    </div>
+    <a href="#" class="back-link" onclick="showMain();return false;">Back</a>
   </div>
-  </div>
+
   <script>
-    // Place your 21 images as nail1.jpg ... nail21.jpg in /nail/
+    // Rotating image (main page)
     const images = [
       './nail/nail1.jpg','./nail/nail2.jpg','./nail/nail3.jpg','./nail/nail4.jpg','./nail/nail5.jpg',
-    './nail/nail6.jpg','./nail/nail7.jpg','./nail/nail8.jpg','./nail/nail9.jpg','./nail/nail10.jpg',
-    './nail/nail11.jpg','./nail/nail12.jpg','./nail/nail13.jpg','./nail/nail14.jpg','./nail/nail15.jpg',
-    './nail/nail16.jpg','./nail/nail17.jpg','./nail/nail18.jpg','./nail/nail19.jpg','./nail/nail20.jpg',
-    './nail/nail21.jpg'
+      './nail/nail6.jpg','./nail/nail7.jpg','./nail/nail8.jpg','./nail/nail9.jpg','./nail/nail10.jpg',
+      './nail/nail11.jpg','./nail/nail12.jpg','./nail/nail13.jpg','./nail/nail14.jpg','./nail/nail15.jpg',
+      './nail/nail16.jpg','./nail/nail17.jpg','./nail/nail18.jpg','./nail/nail19.jpg','./nail/nail20.jpg','./nail/nail21.jpg'
     ];
     let idx = 0;
     setInterval(()=>{
       idx = (idx+1)%images.length;
       document.getElementById('rotating-img').src = images[idx];
     }, 1500);
+
+    // Gallery/show logic
+    function showGallery(){
+      document.getElementById('main-content').style.display = 'none';
+      document.getElementById('gallery-wrap').style.display = 'block';
+    }
+    function showMain(){
+      document.getElementById('gallery-wrap').style.display = 'none';
+      document.getElementById('main-content').style.display = 'flex';
+    }
   </script>
 </body>
 </html>
