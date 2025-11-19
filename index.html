@@ -5,170 +5,101 @@
   <title>Tae Yeong Beauty — Nail Art Design Hoboken NJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tae Yeong Beauty offers the best nail art design and gel manicures in Hoboken, NJ. Custom designs, luxury pedicures, and seasonal looks by talented nail artists. Book your Hoboken appointment today!">
-  <meta name="keywords" content="nail art, nail art design, nail salon, Hoboken NJ, gel manicure, pedicure, nail artist, Tae Yeong Beauty, custom nails, seasonal nails, luxury nails, nail design Hoboken">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NailSalon",
-    "name": "Tae Yeong Beauty",
-    "image": "https://taeyeongbeauty.com/img/logo.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hoboken",
-      "addressRegion": "NJ",
-      "postalCode": "07030",
-      "addressCountry": "US"
-    },
-    "email": "ty@taeyeongbeauty.com",
-    "url": "https://taeyeongbeauty.com/",
-    "description": "Tae Yeong Beauty is a nail salon in Hoboken NJ specializing in custom nail art design, gel manicures, and luxury pedicures. Book your appointment online."
-  }
-  </script>
-  <link rel="manifest" href="manifest.json">
+  <meta name="keywords" content="nail art, nail salon, Hoboken NJ, gel manicure, pedicure, nail artist, Tae Yeong Beauty, custom nails, seasonal nails, luxury nails, nail design Hoboken">
   <link rel="icon" href="./img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-  <style>
-    html { box-sizing:border-box; }
-    *,*:before,*:after { box-sizing:inherit; }
-    body { margin:0; background:#fff; font-family:'PT Serif',serif; color:#231b18;}
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.3rem 4vw 1rem 4vw;
-      border-bottom: 1.5px solid #ececec;
-      background: #fff;
-      width: 100%;
-    }
-    .header-left, .header-right { min-width:70px; flex:1 1 0; }
-    .header-left { text-align:left; }
-    .header-center { flex: 0 0 auto; text-align:center; }
-    .header-logo-img {
-      height: 54px;
-      max-width: 240px;
-      vertical-align:middle;
-      display:inline-block;
-      margin: 0 2vw;
-    }
-    .gallery-link {
-      color:#000;
-      text-decoration:none;
-      font-size:1.12em;
-      font-weight:600;
-      letter-spacing:.04em;
-      border-radius:22px;
-      padding:7px 24px;
-      transition: background .14s;
-    }
-    .gallery-link:hover { text-decoration:underline; background:#fae9f5;}
-    .insta-icon {
-      height: 34px;
-      width: 34px;
-      vertical-align:middle;
-      margin-right:.3em;
-    }
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 3.3em 4vw 2.4em 4vw;
-      display: flex;
-      gap: 3vw;
-      min-height: 430px;
-      align-items: center;
-    }
-    .left-col {
-      flex: 1 1 52%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding-right: 2vw;
-    }
-    .right-col {
-      flex: 1 1 48%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 210px;
-    }
-    .headline {
-      font-size: 2.3rem;
-      font-family:'PT Serif',serif;
-      font-weight:700;
-      margin-bottom: .7em;
-      letter-spacing: -.01em;
-    }
-    .desc {
-      font-size:1.13rem;
-      color:#423d39;
-      line-height:1.7;
-      font-weight:400;
-      margin-bottom:.7em;
-      max-width:540px;
-    }
-    .main-image {
-      width: 98%;
-      max-width: 420px;
-      height: auto;
-      aspect-ratio: 5/6;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 8px 42px #dbb6b728;
-      background: #fff;
-      border: 1px solid #f3e6ef;
-      transition: box-shadow .18s;
-      min-width:160px;
-      min-height:170px;
-    }
-    /* Gallery grid */
-    .gallery-wrap { display:none; padding:3vw 0; max-width:1200px; margin:0 auto;}
-    .gallery-title {font-size:2rem; font-weight:700; text-align:center; margin:2rem 0 1rem;}
-    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.5em; justify-content:center;}
-    .gallery-grid img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:15px; box-shadow:0 2px 18px #ec48990a; border:1.2px solid #f3e6ef;}
-    .back-link {display:block; text-align:center; margin:2em auto 0; color:#ec4899; font-size:1.1em; font-weight:600; text-decoration:none;}
-    .back-link:hover{ text-decoration:underline;}
-    /* Tablet: stack with image on top */
-    @media (max-width:950px) {
-      .container { flex-direction:column; gap:2.7em; padding:2.4em 2vw 1.4em 2vw;}
-      .left-col, .right-col {padding:0; width:100%;}
-      .main-image{max-width:340px;}
-    }
-    /* Mobile: even more compact, smaller logo & fonts */
-    @media (max-width:650px) {
-      .header { flex-direction:column; gap:.7em; padding:1em 2vw .7em 2vw;}
-      .header-logo-img { height:36px; max-width:130px;}
-      .headline { font-size:1.25rem;}
-      .desc { font-size:1em;}
-      .main-image{max-width:92vw; min-height:110px;}
-      .container{padding:1.2em 2vw .6em 2vw;}
-      .header-left, .header-right { text-align:center; }
-      .gallery-grid{grid-template-columns:repeat(2,1fr);}
-    }
-      .gallery-home-link {
-        color: #000;
-        font-size: 1.12rem;
-        font-family: 'PT Serif', serif;
-        font-weight: 700;
-        text-align: right;
-        text-decoration: none;
-        margin: 2rem 2vw 1.1rem 0;
-        padding: 0;
-        letter-spacing: -.01em;
-        background: none;
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-        display: inline-block;
-        transition: color .16s;
-      }
-      .gallery-home-link:hover {
-        text-decoration: underline;
-        color: #ec4899;
-      }
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
 
+  <style>
+    html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
+    body { margin: 0; background: #fff; font-family: 'PT Serif', serif; color: #231b18; }
+
+    /* HEADER */
+    .header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.3rem 4vw 1rem 4vw; border-bottom: 1.5px solid #ececec; background: #fff;
+    }
+    .header-left, .header-right { min-width: 70px; flex: 1 1 0; }
+    .header-center { flex: 0 0 auto; text-align: center; }
+    .header-logo-img { height: 54px; max-width: 240px; vertical-align: middle; display: inline-block; }
+
+    .gallery-link {
+      color: #000; text-decoration: none; font-size: 1.12em; font-weight: 600;
+      letter-spacing: .04em; border-radius: 22px; padding: 7px 24px; transition: background .14s;
+    }
+    .gallery-link:hover { text-decoration: underline; background: #fae9f5; }
+    .insta-icon { height: 34px; width: 34px; vertical-align: middle; margin-right: .3em; }
+
+    /* MAIN SECTION */
+    .container {
+      max-width: 1120px; margin: 0 auto; padding: 3.3em 4vw 2.4em 4vw;
+      display: flex; gap: 3vw; align-items: center; min-height: 430px;
+    }
+    .left-col { flex: 1 1 52%; }
+    .right-col { flex: 1 1 48%; display: flex; justify-content: center; }
+
+    .headline { font-size: 2.3rem; font-weight: 700; margin-bottom: .7em; }
+    .desc { font-size: 1.13rem; color: #423d39; line-height: 1.7; font-weight: 400; max-width: 540px; }
+
+    .main-image {
+      width: 98%; max-width: 420px; border-radius: 18px; box-shadow: 0 8px 42px #dbb6b728;
+      border: 1px solid #f3e6ef; object-fit: cover; aspect-ratio: 5/6;
+      opacity: 1; transition: opacity 0.8s ease-in-out;
+    }
+
+    /* GALLERY */
+    .gallery-wrap { display: none; padding: 3vw 0; max-width: 1200px; margin: 0 auto; }
+    .gallery-home-link {
+      color: #000; font-size: 1.12rem; font-weight: 700; text-decoration: none;
+      margin: 2rem 2vw 1.1rem 0; background: none; border: none; cursor: pointer;
+    }
+    .gallery-home-link:hover { text-decoration: underline; color: #ec4899; }
+
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5em; justify-content: center;
+    }
+    .gallery-grid img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover;
+      border-radius: 15px; box-shadow: 0 2px 18px #ec48990a;
+      border: 1.2px solid #f3e6ef; cursor: pointer; transition: transform .15s;
+    }
+    .gallery-grid img:hover { transform: scale(1.03); }
+
+    /* Responsive gallery layout */
+    @media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 650px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8em; } }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none; position: fixed; z-index: 1000; top: 0; left: 0;
+      width: 100vw; height: 100vh; background: rgba(0,0,0,0.85);
+      justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease;
+    }
+    .lightbox.show { display: flex; opacity: 1; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 10px; transition: transform 0.3s ease; }
+    .lightbox img:hover { transform: scale(1.02); }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 30px; font-size: 2rem;
+      color: #fff; cursor: pointer; font-family: sans-serif;
+    }
+
+    /* RESPONSIVE HEADER */
+    @media (max-width: 950px) {
+      .container { flex-direction: column; gap: 2.7em; padding: 2.4em 2vw; }
+      .main-image { max-width: 340px; }
+    }
+    @media (max-width: 650px) {
+      .header { flex-direction: column; gap: .7em; padding: 1em 2vw .7em; }
+      .header-logo-img { height: 36px; max-width: 130px; }
+      .headline { font-size: 1.25rem; }
+      .desc { font-size: 1em; }
+    }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
   <div class="header">
     <div class="header-left">
       <a class="gallery-link" href="#" onclick="showGallery();return false;">Gallery</a>
@@ -183,12 +114,14 @@
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- MAIN SECTION -->
   <div class="container" id="main-content">
     <div class="left-col">
       <div class="headline">Tae Yeong Nails like no other</div>
       <div class="desc">
-        Featuring two locations, our techs and artists are ready to bring out the best in you. Top of the line manicures, nail art and specialized pedicures that will have you stand out from the crowd. Online booking available below.
+        Our techs and artists are ready to bring out the best in you. Top of the line manicures,
+        nail art and specialized pedicures that will have you stand out from the crowd.
+        Online booking available below.
       </div>
     </div>
     <div class="right-col">
@@ -196,63 +129,103 @@
     </div>
   </div>
 
-<div class="gallery-wrap" id="gallery-wrap">
-  <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 1.7rem;">
-    <a href="#" class="gallery-home-link" onclick="showMain();return false;">Home</a>
+  <!-- GALLERY -->
+  <div class="gallery-wrap" id="gallery-wrap">
+    <div style="display:flex; align-items:center; justify-content:flex-end; margin-bottom:1.7rem;">
+      <a href="#" class="gallery-home-link" onclick="showMain();return false;">Home</a>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <img src="./nail/nail1.jpg" alt="Nail 1">
+      <img src="./nail/nail2.jpg" alt="Nail 2">
+      <img src="./nail/nail3.jpg" alt="Nail 3">
+      <img src="./nail/nail4.jpg" alt="Nail 4">
+      <img src="./nail/nail5.jpg" alt="Nail 5">
+      <img src="./nail/nail6.jpg" alt="Nail 6">
+      <img src="./nail/nail7.jpg" alt="Nail 7">
+      <img src="./nail/nail8.jpg" alt="Nail 8">
+      <img src="./nail/nail9.jpg" alt="Nail 9">
+      <img src="./nail/nail10.jpg" alt="Nail 10">
+      <img src="./nail/nail11.jpg" alt="Nail 11">
+      <img src="./nail/nail12.jpg" alt="Nail 12">
+      <img src="./nail/nail13.jpg" alt="Nail 13">
+      <img src="./nail/nail14.jpg" alt="Nail 14">
+      <img src="./nail/nail15.jpg" alt="Nail 15">
+      <img src="./nail/nail16.jpg" alt="Nail 16">
+      <img src="./nail/nail17.jpg" alt="Nail 17">
+      <img src="./nail/nail18.jpg" alt="Nail 18">
+      <img src="./nail/nail19.jpg" alt="Nail 19">
+      <img src="./nail/nail20.jpg" alt="Nail 20">
+      <img src="./nail/nail21.jpg" alt="Nail 21">
+      <img src="./nail/nail22.jpg" alt="Nail 22">
+      <img src="./nail/nail23.jpg" alt="Nail 23">
+      <img src="./nail/nail24.jpg" alt="Nail 24">
+      <img src="./nail/nail25.jpg" alt="Nail 25">
+      <img src="./nail/nail26.jpg" alt="Nail 26">
+    </div>
   </div>
-  <div class="gallery-grid">
-    <img src="./nail/nail22.jpg" alt="Nail 22">
-    <img src="./nail/nail23.jpg" alt="Nail 23">
-    <img src="./nail/nail24.jpg" alt="Nail 24">
-    <img src="./nail/nail1.jpg" alt="Nail 1">
-    <img src="./nail/nail2.jpg" alt="Nail 2">
-    <img src="./nail/nail3.jpg" alt="Nail 3">
-    <img src="./nail/nail4.jpg" alt="Nail 4">
-    <img src="./nail/nail5.jpg" alt="Nail 5">
-    <img src="./nail/nail6.jpg" alt="Nail 6">
-    <img src="./nail/nail7.jpg" alt="Nail 7">
-    <img src="./nail/nail8.jpg" alt="Nail 8">
-    <img src="./nail/nail9.jpg" alt="Nail 9">
-    <img src="./nail/nail10.jpg" alt="Nail 10">
-    <img src="./nail/nail11.jpg" alt="Nail 11">
-    <img src="./nail/nail12.jpg" alt="Nail 12">
-    <img src="./nail/nail13.jpg" alt="Nail 13">
-    <img src="./nail/nail14.jpg" alt="Nail 14">
-    <img src="./nail/nail15.jpg" alt="Nail 15">
-    <img src="./nail/nail16.jpg" alt="Nail 16">
-    <img src="./nail/nail17.jpg" alt="Nail 17">
-    <img src="./nail/nail18.jpg" alt="Nail 18">
-    <img src="./nail/nail19.jpg" alt="Nail 19">
-    <img src="./nail/nail20.jpg" alt="Nail 20">
-    <img src="./nail/nail21.jpg" alt="Nail 21">
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Enlarged Image">
   </div>
-</div>
 
-
+  <!-- JAVASCRIPT -->
   <script>
-    // Rotating image (main page)
+    // Rotating image with fade effect
     const images = [
-      './nail/nail22.jpg','./nail/nail23.jpg','./nail/nail24.jpg',
+      './nail/nail25.jpg','./nail/nail26.jpg','./nail/nail22.jpg','./nail/nail23.jpg','./nail/nail24.jpg',
       './nail/nail1.jpg','./nail/nail2.jpg','./nail/nail3.jpg','./nail/nail4.jpg','./nail/nail5.jpg',
       './nail/nail6.jpg','./nail/nail7.jpg','./nail/nail8.jpg','./nail/nail9.jpg','./nail/nail10.jpg',
       './nail/nail11.jpg','./nail/nail12.jpg','./nail/nail13.jpg','./nail/nail14.jpg','./nail/nail15.jpg',
       './nail/nail16.jpg','./nail/nail17.jpg','./nail/nail18.jpg','./nail/nail19.jpg','./nail/nail20.jpg','./nail/nail21.jpg'
     ];
     let idx = 0;
-    setInterval(()=>{
-      idx = (idx+1)%images.length;
-      document.getElementById('rotating-img').src = images[idx];
-    }, 1500);
+    setInterval(() => {
+      const img = document.getElementById('rotating-img');
+      img.style.opacity = 0;
+      setTimeout(() => {
+        idx = (idx + 1) % images.length;
+        img.src = images[idx];
+        img.style.opacity = 1;
+      }, 400);
+    }, 2000);
 
-    // Gallery/show logic
-    function showGallery(){
+    // Gallery toggle
+    function showGallery() {
       document.getElementById('main-content').style.display = 'none';
       document.getElementById('gallery-wrap').style.display = 'block';
     }
-    function showMain(){
+    function showMain() {
       document.getElementById('gallery-wrap').style.display = 'none';
       document.getElementById('main-content').style.display = 'flex';
     }
+
+    // Lightbox with fade effect
+    const galleryImages = document.querySelectorAll('.gallery-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('show');
+      setTimeout(() => { lightbox.style.display = 'none'; }, 400);
+    }
+
+    lightbox.addEventListener('click', e => {
+      if (e.target !== lightboxImg) closeLightbox();
+    });
+
+    // Ensure display resets properly when opening
+    lightbox.addEventListener('transitionstart', () => {
+      if (lightbox.classList.contains('show')) lightbox.style.display = 'flex';
+    });
   </script>
 </body>
 </html>
