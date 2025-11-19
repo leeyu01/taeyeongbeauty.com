@@ -72,17 +72,46 @@
 
     /* LIGHTBOX */
     .lightbox {
-      display: none; position: fixed; z-index: 1000; top: 0; left: 0;
-      width: 100vw; height: 100vh; background: rgba(0,0,0,0.85);
-      justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease;
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
-    .lightbox.show { display: flex; opacity: 1; }
-    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 10px; transition: transform 0.3s ease; }
-    .lightbox img:hover { transform: scale(1.02); }
+    
+    .lightbox.show {
+      /* Only change opacity now, not display */
+      opacity: 1;
+    }
+    
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .lightbox img:hover {
+      transform: scale(1.02);
+    }
+    
     .lightbox-close {
-      position: absolute; top: 20px; right: 30px; font-size: 2rem;
-      color: #fff; cursor: pointer; font-family: sans-serif;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-family: sans-serif;
     }
+    
 
     /* RESPONSIVE HEADER */
     @media (max-width: 950px) {
@@ -170,7 +199,7 @@
     <img id="lightbox-img" src="" alt="Enlarged Image">
   </div>
 
-  <!-- JAVASCRIPT -->
+   <!-- JAVASCRIPT -->
   <script>
     // Rotating image with fade effect
     const images = [
@@ -201,13 +230,18 @@
       document.getElementById('main-content').style.display = 'flex';
     }
 
-    // Lightbox with fade effect
+    // --- FIXED LIGHTBOX ---
     const galleryImages = document.querySelectorAll('.gallery-grid img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const fadeDuration = 400;
 
     galleryImages.forEach(img => {
       img.addEventListener('click', () => {
+        // reset display before fade-in
+        lightbox.style.display = 'flex';
+        // force reflow to ensure opacity transition restarts
+        void lightbox.offsetWidth;
         lightboxImg.src = img.src;
         lightbox.classList.add('show');
       });
@@ -215,16 +249,16 @@
 
     function closeLightbox() {
       lightbox.classList.remove('show');
-      setTimeout(() => { lightbox.style.display = 'none'; }, 400);
+      // after fade-out, hide the element
+      setTimeout(() => { 
+        if (!lightbox.classList.contains('show')) {
+          lightbox.style.display = 'none';
+        }
+      }, fadeDuration);
     }
 
     lightbox.addEventListener('click', e => {
       if (e.target !== lightboxImg) closeLightbox();
-    });
-
-    // Ensure display resets properly when opening
-    lightbox.addEventListener('transitionstart', () => {
-      if (lightbox.classList.contains('show')) lightbox.style.display = 'flex';
     });
   </script>
 </body>
