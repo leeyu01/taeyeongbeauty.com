@@ -209,15 +209,17 @@
       './nail/nail16.jpg','./nail/nail17.jpg','./nail/nail18.jpg','./nail/nail19.jpg','./nail/nail20.jpg','./nail/nail21.jpg'
     ];
     let idx = 0;
-    setInterval(() => {
-      const img = document.getElementById('rotating-img');
-      img.style.opacity = 0;
-      setTimeout(() => {
-        idx = (idx + 1) % images.length;
-        img.src = images[idx];
-        img.style.opacity = 1;
-      }, 400);
-    }, 2000);
+setInterval(() => {
+  const img = document.getElementById('rotating-img');
+  img.style.opacity = 0;
+  setTimeout(() => {
+    idx = (idx + 1) % images.length;
+    img.src = images[idx];
+    img.style.opacity = 1;
+  }, 400);
+}, 2000);
+
+
 
     // Gallery toggle
     function showGallery() {
