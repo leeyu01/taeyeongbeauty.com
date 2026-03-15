@@ -1,279 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tae Yeong Beauty — Nail Art Design Hoboken NJ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tae Yeong Beauty offers the best nail art design and gel manicures in Hoboken, NJ. Custom designs, luxury pedicures, and seasonal looks by talented nail artists. Book your Hoboken appointment today!">
-  <meta name="keywords" content="nail art, nail salon, Hoboken NJ, gel manicure, pedicure, nail artist, Tae Yeong Beauty, custom nails, seasonal nails, luxury nails, nail design Hoboken">
-  <link rel="icon" href="./img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>Tae Yeong Beauty — Nail Art Design Hoboken NJ</title>
 
-  <style>
-    html { box-sizing: border-box; }
-    *, *:before, *:after { box-sizing: inherit; }
-    body { margin: 0; background: #fff; font-family: 'PT Serif', serif; color: #231b18; }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tae Yeong Beauty offers the best nail art design and gel manicures in Hoboken, NJ. Custom designs, luxury pedicures, and seasonal looks by talented nail artists.">
+<meta name="keywords" content="nail art, nail salon, Hoboken NJ, gel manicure, pedicure, nail artist">
 
-    /* HEADER */
-    .header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.3rem 4vw 1rem 4vw; border-bottom: 1.5px solid #ececec; background: #fff;
-    }
-    .header-left, .header-right { min-width: 70px; flex: 1 1 0; }
-    .header-center { flex: 0 0 auto; text-align: center; }
-    .header-logo-img { height: 54px; max-width: 240px; vertical-align: middle; display: inline-block; }
+<link rel="icon" href="./img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
 
-    .gallery-link {
-      color: #000; text-decoration: none; font-size: 1.12em; font-weight: 600;
-      letter-spacing: .04em; border-radius: 22px; padding: 7px 24px; transition: background .14s;
-    }
-    .gallery-link:hover { text-decoration: underline; background: #fae9f5; }
-    .insta-icon { height: 34px; width: 34px; vertical-align: middle; margin-right: .3em; }
+<style>
 
-    /* MAIN SECTION */
-    .container {
-      max-width: 1120px; margin: 0 auto; padding: 3.3em 4vw 2.4em 4vw;
-      display: flex; gap: 3vw; align-items: center; min-height: 430px;
-    }
-    .left-col { flex: 1 1 52%; }
-    .right-col { flex: 1 1 48%; display: flex; justify-content: center; }
+html { box-sizing:border-box; }
+*,*:before,*:after { box-sizing:inherit; }
 
-    .headline { font-size: 2.3rem; font-weight: 700; margin-bottom: .7em; }
-    .desc { font-size: 1.13rem; color: #423d39; line-height: 1.7; font-weight: 400; max-width: 540px; }
+body{
+margin:0;
+background:#fff;
+font-family:'PT Serif',serif;
+color:#231b18;
+}
 
-    .main-image {
-      width: 98%; max-width: 420px; border-radius: 18px; box-shadow: 0 8px 42px #dbb6b728;
-      border: 1px solid #f3e6ef; object-fit: cover; aspect-ratio: 5/6;
-      opacity: 1; transition: opacity 0.8s ease-in-out;
-    }
+/* HEADER */
 
-    /* GALLERY */
-    .gallery-wrap { display: none; padding: 3vw 0; max-width: 1200px; margin: 0 auto; }
-    .gallery-home-link {
-      color: #000; font-size: 1.12rem; font-weight: 700; text-decoration: none;
-      margin: 2rem 2vw 1.1rem 0; background: none; border: none; cursor: pointer;
-    }
-    .gallery-home-link:hover { text-decoration: underline; color: #ec4899; }
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:1.3rem 4vw 1rem;
+border-bottom:1.5px solid #ececec;
+}
 
-    .gallery-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.5em; justify-content: center;
-    }
-    .gallery-grid img {
-      width: 100%; aspect-ratio: 4/5; object-fit: cover;
-      border-radius: 15px; box-shadow: 0 2px 18px #ec48990a;
-      border: 1.2px solid #f3e6ef; cursor: pointer; transition: transform .15s;
-    }
-    .gallery-grid img:hover { transform: scale(1.03); }
+.header-left,.header-right{flex:1}
 
-    /* Responsive gallery layout */
-    @media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
-    @media (max-width: 650px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8em; } }
+.header-center{text-align:center}
 
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    
-    .lightbox.show {
-      /* Only change opacity now, not display */
-      opacity: 1;
-    }
-    
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 85vh;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    
-    .lightbox img:hover {
-      transform: scale(1.02);
-    }
-    
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      color: #fff;
-      cursor: pointer;
-      font-family: sans-serif;
-    }
-    
+.header-logo-img{
+height:54px;
+max-width:240px;
+}
 
-    /* RESPONSIVE HEADER */
-    @media (max-width: 950px) {
-      .container { flex-direction: column; gap: 2.7em; padding: 2.4em 2vw; }
-      .main-image { max-width: 340px; }
-    }
-    @media (max-width: 650px) {
-      .header { flex-direction: column; gap: .7em; padding: 1em 2vw .7em; }
-      .header-logo-img { height: 36px; max-width: 130px; }
-      .headline { font-size: 1.25rem; }
-      .desc { font-size: 1em; }
-    }
-  </style>
+.gallery-link{
+text-decoration:none;
+font-weight:600;
+letter-spacing:.04em;
+padding:7px 24px;
+border-radius:22px;
+}
+
+.gallery-link:hover{
+background:#fae9f5;
+}
+
+.insta-icon{
+height:34px;
+width:34px;
+}
+
+/* MAIN */
+
+.container{
+max-width:1120px;
+margin:auto;
+padding:3.3em 4vw;
+display:flex;
+gap:3vw;
+align-items:center;
+}
+
+.left-col{flex:1}
+
+.right-col{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.headline{
+font-size:2.3rem;
+margin-bottom:.7em;
+}
+
+.desc{
+font-size:1.13rem;
+line-height:1.7;
+color:#423d39;
+}
+
+.main-image{
+width:98%;
+max-width:420px;
+border-radius:18px;
+box-shadow:0 8px 42px #dbb6b728;
+border:1px solid #f3e6ef;
+aspect-ratio:5/6;
+object-fit:cover;
+opacity:1;
+transition:opacity .8s ease;
+}
+
+/* GALLERY */
+
+.gallery-wrap{
+display:none;
+padding:3vw;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:1.5em;
+}
+
+.gallery-grid img{
+width:100%;
+aspect-ratio:4/5;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+transition:transform .15s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+opacity:0;
+transition:opacity .4s ease;
+}
+
+.lightbox.show{
+opacity:1;
+}
+
+.lightbox img{
+max-width:90vw;
+max-height:85vh;
+border-radius:10px;
+}
+
+.lightbox-close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:2rem;
+color:#fff;
+cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <a class="gallery-link" href="#" onclick="showGallery();return false;">Gallery</a>
-    </div>
-    <div class="header-center">
-      <img src="./img/logo.jpg" class="header-logo-img" alt="Tae Yeong Beauty Logo">
-    </div>
-    <div class="header-right" style="text-align:right;">
-      <a href="https://instagram.com/taeyeongbeauty" target="_blank">
-        <img src="./img/inst.png" class="insta-icon" alt="Instagram">
-      </a>
-    </div>
-  </div>
 
-  <!-- MAIN SECTION -->
-  <div class="container" id="main-content">
-    <div class="left-col">
-      <div class="headline">Tae Yeong Nails like no other</div>
-      <div class="desc">
-        Experience the art of detail with our nail designs, where only the finest materials—chosen for the health and beauty of your nails—meet a relentless pursuit of perfection in every finish. From the hands of dedicated nail artists to premium ingredients, we ensure your nails not only look flawless but truly feel their best with every visit
-      </div>
-    </div>
-    <div class="right-col">
-      <img class="main-image" id="rotating-img" src="./nail/nail1.jpg" alt="Nail Art">
-    </div>
-  </div>
+<!-- HEADER -->
 
-  <!-- GALLERY -->
-  <div class="gallery-wrap" id="gallery-wrap">
-    <div style="display:flex; align-items:center; justify-content:flex-end; margin-bottom:1.7rem;">
-      <a href="#" class="gallery-home-link" onclick="showMain();return false;">Home</a>
-    </div>
-    <div class="gallery-grid" id="gallery-grid">
-      <img src="./nail/nail35.jpg" alt="Nail 35">
-      <img src="./nail/nail34.jpg" alt="Nail 34">
-      <img src="./nail/nail33.jpg" alt="Nail 33">
-      <img src="./nail/nail32.jpg" alt="Nail 32">
-      <img src="./nail/nail31.jpg" alt="Nail 31">
-      <img src="./nail/nail30.jpg" alt="Nail 30">
-      <img src="./nail/nail29.jpg" alt="Nail 29">
-      <img src="./nail/nail28.jpg" alt="Nail 28">
-      <img src="./nail/nail27.jpg" alt="Nail 27">
-      <img src="./nail/nail25.jpg" alt="Nail 25">
-      <img src="./nail/nail26.jpg" alt="Nail 26">
-      <img src="./nail/nail22.jpg" alt="Nail 22">
-      <img src="./nail/nail23.jpg" alt="Nail 23">
-      <img src="./nail/nail24.jpg" alt="Nail 24">
-      <img src="./nail/nail1.jpg" alt="Nail 1">
-      <img src="./nail/nail2.jpg" alt="Nail 2">
-      <img src="./nail/nail3.jpg" alt="Nail 3">
-      <img src="./nail/nail4.jpg" alt="Nail 4">
-      <img src="./nail/nail5.jpg" alt="Nail 5">
-      <img src="./nail/nail6.jpg" alt="Nail 6">
-      <img src="./nail/nail7.jpg" alt="Nail 7">
-      <img src="./nail/nail8.jpg" alt="Nail 8">
-      <img src="./nail/nail9.jpg" alt="Nail 9">
-      <img src="./nail/nail10.jpg" alt="Nail 10">
-      <img src="./nail/nail11.jpg" alt="Nail 11">
-      <img src="./nail/nail12.jpg" alt="Nail 12">
-      <img src="./nail/nail13.jpg" alt="Nail 13">
-      <img src="./nail/nail14.jpg" alt="Nail 14">
-      <img src="./nail/nail15.jpg" alt="Nail 15">
-      <img src="./nail/nail16.jpg" alt="Nail 16">
-      <img src="./nail/nail17.jpg" alt="Nail 17">
-      <img src="./nail/nail18.jpg" alt="Nail 18">
-      <img src="./nail/nail19.jpg" alt="Nail 19">
-      <img src="./nail/nail20.jpg" alt="Nail 20">
-      <img src="./nail/nail21.jpg" alt="Nail 21">
-    </div>
-  </div>
+<div class="header">
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">×</span>
-    <img id="lightbox-img" src="" alt="Enlarged Image">
-  </div>
+<div class="header-left">
+<a class="gallery-link" href="#" onclick="showGallery();return false;">Gallery</a>
+</div>
 
-   <!-- JAVASCRIPT -->
-  <script>
-    // Rotating image with fade effect
-    const images = [
-      './nail/nail35.jpg','./nail/nail34.jpg','./nail/nail33.jpg','./nail/nail32.jpg','./nail/nail31.jpg','./nail/nail30.jpg', './nail/nail29.jpg','./nail/nail28.jpg', './nail/nail27.jpg','./nail/nail25.jpg','./nail/nail26.jpg','./nail/nail22.jpg','./nail/nail23.jpg','./nail/nail24.jpg',
-      './nail/nail1.jpg','./nail/nail2.jpg','./nail/nail3.jpg','./nail/nail4.jpg','./nail/nail5.jpg',
-      './nail/nail6.jpg','./nail/nail7.jpg','./nail/nail8.jpg','./nail/nail9.jpg','./nail/nail10.jpg',
-      './nail/nail11.jpg','./nail/nail12.jpg','./nail/nail13.jpg','./nail/nail14.jpg','./nail/nail15.jpg',
-      './nail/nail16.jpg','./nail/nail17.jpg','./nail/nail18.jpg','./nail/nail19.jpg','./nail/nail20.jpg','./nail/nail21.jpg'
-    ];
-    let idx = 0;
+<div class="header-center">
+<img src="./img/logo.jpg" class="header-logo-img">
+</div>
 
-const img = document.getElementById('rotating-img');
-img.src = images[0];   // show FIRST image immediately
-img.style.opacity = 1;
+<div class="header-right" style="text-align:right">
+<a href="https://instagram.com/taeyeongbeauty" target="_blank">
+<img src="./img/inst.png" class="insta-icon">
+</a>
+</div>
 
-setInterval(() => {
-  img.style.opacity = 0;
-  setTimeout(() => {
-    idx = (idx + 1) % images.length;
-    img.src = images[idx];
-    img.style.opacity = 1;
-  }, 400);
-}, 2000);
+</div>
 
+<!-- MAIN -->
 
+<div class="container" id="main-content">
 
+<div class="left-col">
 
-    // Gallery toggle
-    function showGallery() {
-      document.getElementById('main-content').style.display = 'none';
-      document.getElementById('gallery-wrap').style.display = 'block';
-    }
-    function showMain() {
-      document.getElementById('gallery-wrap').style.display = 'none';
-      document.getElementById('main-content').style.display = 'flex';
-    }
+<div class="headline">
+Tae Yeong Nails like no other
+</div>
 
-    // --- FIXED LIGHTBOX ---
-    const galleryImages = document.querySelectorAll('.gallery-grid img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const fadeDuration = 400;
+<div class="desc">
+Experience the art of detail with our nail designs, where only the finest materials meet a relentless pursuit of perfection in every finish.
+</div>
 
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        // reset display before fade-in
-        lightbox.style.display = 'flex';
-        // force reflow to ensure opacity transition restarts
-        void lightbox.offsetWidth;
-        lightboxImg.src = img.src;
-        lightbox.classList.add('show');
-      });
-    });
+</div>
 
-    function closeLightbox() {
-      lightbox.classList.remove('show');
-      // after fade-out, hide the element
-      setTimeout(() => { 
-        if (!lightbox.classList.contains('show')) {
-          lightbox.style.display = 'none';
-        }
-      }, fadeDuration);
-    }
+<div class="right-col">
+<img id="rotating-img" class="main-image">
+</div>
 
-    lightbox.addEventListener('click', e => {
-      if (e.target !== lightboxImg) closeLightbox();
-    });
-  </script>
+</div>
+
+<!-- GALLERY -->
+
+<div class="gallery-wrap" id="gallery-wrap">
+
+<div style="text-align:right;margin-bottom:2rem">
+<a href="#" onclick="showMain()">Home</a>
+</div>
+
+<div class="gallery-grid" id="gallery-grid"></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+<span class="lightbox-close" onclick="closeLightbox()">×</span>
+<img id="lightbox-img">
+</div>
+
+<script>
+
+const img=document.getElementById("rotating-img");
+const galleryGrid=document.getElementById("gallery-grid");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+let images=[];
+let idx=0;
+
+const maxImagesToCheck=200;
+
+function loadImages(){
+
+let promises=[];
+
+for(let i=1;i<=maxImagesToCheck;i++){
+
+let path=`./nail/nail${i}.jpg`;
+
+promises.push(new Promise(resolve=>{
+
+let test=new Image();
+
+test.onload=()=>resolve({exists:true,path,num:i});
+test.onerror=()=>resolve({exists:false});
+
+test.src=path;
+
+}));
+
+}
+
+Promise.all(promises).then(results=>{
+
+images=results
+.filter(r=>r.exists)
+.sort((a,b)=>b.num-a.num)
+.map(r=>r.path);
+
+if(images.length===0)return;
+
+img.src=images[0];
+
+buildGallery();
+
+startRotation();
+
+});
+
+}
+
+function buildGallery(){
+
+images.forEach(src=>{
+
+let g=document.createElement("img");
+
+g.src=src;
+
+galleryGrid.appendChild(g);
+
+g.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+
+void lightbox.offsetWidth;
+
+lightboxImg.src=src;
+
+lightbox.classList.add("show");
+
+});
+
+});
+
+}
+
+function startRotation(){
+
+setInterval(()=>{
+
+img.style.opacity=0;
+
+setTimeout(()=>{
+
+idx=(idx+1)%images.length;
+
+img.src=images[idx];
+
+img.style.opacity=1;
+
+},400);
+
+},2000);
+
+}
+
+function showGallery(){
+
+document.getElementById("main-content").style.display="none";
+
+document.getElementById("gallery-wrap").style.display="block";
+
+}
+
+function showMain(){
+
+document.getElementById("gallery-wrap").style.display="none";
+
+document.getElementById("main-content").style.display="flex";
+
+}
+
+function closeLightbox(){
+
+lightbox.classList.remove("show");
+
+setTimeout(()=>{
+
+lightbox.style.display="none";
+
+},400);
+
+}
+
+lightbox.addEventListener("click",e=>{
+if(e.target!==lightboxImg)closeLightbox();
+});
+
+loadImages();
+
+</script>
+
 </body>
 </html>
